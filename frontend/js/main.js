@@ -2,7 +2,7 @@
 
 // API URL
  // ✅ fixed (added https)
-
+const API_BASE_URL ='https://ki-bharat-solar-gqxb.vercel.app';
 
 
 
@@ -334,24 +334,18 @@ alert("Error submitting form");
 // ✅ FIX 2: TAB SWITCH
 // ----------------------------
 
-function switchTab(tab){
+function switchTab(tab) {
 
-const consultation=document.getElementById("consultation-tab");
-const booking=document.getElementById("booking-tab");
+    const consultation = document.getElementById("consultation-tab");
+    const lead = document.getElementById("lead-tab");
 
-if(tab==="consultation"){
+    if (consultation) consultation.style.display = "none";
+    if (lead) lead.style.display = "none";
 
-consultation.style.display="block";
-booking.style.display="none";
-
-}else{
-
-consultation.style.display="none";
-booking.style.display="block";
-
+    const activeTab = document.getElementById(tab);
+    if (activeTab) activeTab.style.display = "block";
 }
 
-}
 
 
 // Initialize
