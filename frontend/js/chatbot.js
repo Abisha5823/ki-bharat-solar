@@ -3,7 +3,7 @@
 // API Configuration
 
 
-console.log("🌐 Using API URL:", API_BASE_URL);
+
 
 class SolarChatbot {
     constructor() {
