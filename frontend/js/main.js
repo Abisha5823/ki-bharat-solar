@@ -1,9 +1,9 @@
 // Main JavaScript for Solar Company Website
 
 // API URL
-const MAIN_API_URL = 'https://ki-bharat-solar-gqxb.vercel.app'; // ✅ fixed (added https)
+ // ✅ fixed (added https)
 
-console.log('🌐 Main using API URL:', MAIN_API_URL);
+
 
 
 // Load company data
