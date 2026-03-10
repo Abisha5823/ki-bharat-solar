@@ -1,6 +1,6 @@
 // Solar AI Chatbot with RAG
 // API Configuration - Auto-detects environment
-const API_BASE_URL = 'ki-bharat-solar-gqxb.vercel.app'; // Replace with your actual backend URL
+const API_BASE_URL = 'https://ki-bharat-solar-gqxb.vercel.app'; // Replace with your actual backend URL
 
 console.log('🌐 Using API URL:', API_BASE_URL);
 class SolarChatbot {
