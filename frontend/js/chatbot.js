@@ -1,7 +1,7 @@
 // Solar AI Chatbot with RAG
 
 // API Configuration
-const API_BASE_URL = "https://ki-bharat-solar-gqxb.vercel.app";
+
 
 console.log("🌐 Using API URL:", API_BASE_URL);
 
