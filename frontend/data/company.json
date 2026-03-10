@@ -1,0 +1,21 @@
+{
+  "company_name": "KI Bharat Energies Solar Company",
+  "tagline": "Authorized Solar Solutions Provider",
+  "location": "Thoothukudi, Tamil Nadu",
+  "address": "123 Main Road, Thoothukudi - 628001",
+  "phone": "+91 98765 43210",
+  "whatsapp": "+91 98765 43210",
+  "email": "info@kibharatenergies.com",
+  "google_map": "https://goo.gl/maps/example",
+  "working_hours": "Mon-Sat: 9:00 AM - 7:00 PM",
+  "services": [
+    "Solar Pump Installation",
+    "Solar Panel Systems",
+    "Hybrid Inverters",
+    "Micro Inverters",
+    "Residential Solar Solutions",
+    "Commercial Solar Systems"
+  ],
+  "founded_year": "2020",
+  "team_size": "15+ Experienced Engineers"
+}

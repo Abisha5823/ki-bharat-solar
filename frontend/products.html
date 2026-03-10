@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - KI Bharat Energies</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1>KI <span>BHARAT</span> ENERGIES</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="contact.html" class="contact-btn">Get Quote</a>
+        </div>
+    </header>
+
+    <section class="products" style="padding-top: 100px;">
+        <div class="products-container">
+            <h2 class="section-title">Our Products</h2>
+            
+            <div style="text-align: center; margin: 30px 0;">
+                <button class="btn-primary" onclick="filterProducts('all')">All Products</button>
+                <button class="btn-secondary" onclick="filterProducts('Solar Panels')">Solar Panels</button>
+                <button class="btn-secondary" onclick="filterProducts('Solar Pumps')">Solar Pumps</button>
+                <button class="btn-secondary" onclick="filterProducts('Inverters')">Inverters</button>
+                <button class="btn-secondary" onclick="filterProducts('Micro Inverters')">Micro Inverters</button>
+            </div>
+
+            <div class="products-grid" id="productsGrid"></div>
+        </div>
+    </section>
+
+    <section class="pricing-section">
+        <h2 class="section-title">Solar Pump Pricing</h2>
+        <table class="pricing-table" id="pump-pricing">
+            <thead>
+                <tr>
+                    <th>Pump Capacity</th>
+                    <th>Price</th>
+                    <th>Panels Required</th>
+                    <th>Suitable Land</th>
+                    <th>Water Output</th>
+                </tr>
+            </thead>
+            <tbody id="pump-pricing-body"></tbody>
+        </table>
+
+        <h2 class="section-title" style="margin-top: 50px;">Inverter Pricing</h2>
+        <table class="pricing-table">
+            <thead>
+                <tr>
+                    <th>Capacity</th>
+                    <th>Price</th>
+                    <th>Battery Support</th>
+                    <th>Suitable For</th>
+                </tr>
+            </thead>
+            <tbody id="inverter-pricing-body"></tbody>
+        </table>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>KI Bharat Energies</h3>
+                <p>Your trusted solar partner in Thoothukudi. Quality products, professional installation.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contact Info</h3>
+                <ul>
+                    <li><i class="fas fa-phone"></i> +91 98765 43210</li>
+                    <li><i class="fab fa-whatsapp"></i> +91 98765 43210</li>
+                    <li><i class="fas fa-envelope"></i> info@kibharatenergies.com</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Thoothukudi, Tamil Nadu</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 KI Bharat Energies Solar Company. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div class="chatbot-container">
+        <div class="chatbot-toggle" onclick="toggleChatbot()">
+            <i class="fas fa-comment"></i>
+        </div>
+        <div class="chatbot-box" id="chatbotBox">
+            <div class="chatbot-header">
+                <h3><i class="fas fa-sun"></i> Solar Assistant</h3>
+                <button class="close-chat" onclick="toggleChatbot()"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <div class="message bot">
+                    <div class="message-content">
+                        👋 Hi! I'm your Solar Assistant. Ask me about products and recommendations!
+                    </div>
+                </div>
+            </div>
+            <div class="chat-input-area">
+                <input type="text" id="chatInput" placeholder="Ask about solar products...">
+                <button onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/chatbot.js"></script>
+</body>
+</html>

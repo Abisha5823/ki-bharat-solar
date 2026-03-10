@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KI Bharat Energies - Solar Solutions</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1>KI <span>BHARAT</span> ENERGIES</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="contact.html" class="contact-btn">Get Quote</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h2>Power Your Future with Solar Energy</h2>
+        <p>Authorized Solar Solutions Provider in Thoothukudi - Solar Pumps, Panels & Hybrid Inverters</p>
+        <div class="hero-buttons">
+            <a href="products.html" class="btn-primary">Explore Products</a>
+            <a href="contact.html" class="btn-secondary">Free Consultation</a>
+        </div>
+    </section>
+
+    <section class="services">
+        <h2 class="section-title">Our Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-solar-panel"></i></div>
+                <h3>Solar Panel Installation</h3>
+                <p>High-efficiency solar panels for homes and businesses. 25 years warranty.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-water"></i></div>
+                <h3>Solar Water Pumps</h3>
+                <p>Complete solar pump solutions for agriculture. 3HP to 20HP available.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-bolt"></i></div>
+                <h3>Hybrid Inverters</h3>
+                <p>Smart inverters with grid, solar and battery support. WiFi enabled.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-tools"></i></div>
+                <h3>Installation & Maintenance</h3>
+                <p>Professional installation by experienced engineers. AMC available.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing-section">
+        <h2 class="section-title">Solar System Pricing</h2>
+        <table class="pricing-table">
+            <thead>
+                <tr>
+                    <th>Monthly EB Bill</th>
+                    <th>Recommended System</th>
+                    <th>Estimated Cost</th>
+                    <th>Space Required</th>
+                </tr>
+            </thead>
+            <tbody id="pricing-table-body"></tbody>
+        </table>
+    </section>
+
+    <section class="quick-quote">
+        <h2>Get Quick Quote</h2>
+        <p>Tell us your requirement and we'll get back to you</p>
+        <div class="quote-form">
+            <div class="form-group">
+                <input type="text" id="quote-name" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+                <input type="tel" id="quote-phone" placeholder="Phone Number" required>
+            </div>
+            <div class="form-group">
+                <select id="quote-interest">
+                    <option value="">I'm interested in...</option>
+                    <option value="solar-panel">Solar Panel</option>
+                    <option value="solar-pump">Solar Pump</option>
+                    <option value="inverter">Inverter</option>
+                </select>
+            </div>
+            <button class="btn-primary" onclick="submitQuickQuote()" style="width: 100%;">Get Quote</button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>KI Bharat Energies</h3>
+                <p>Your trusted solar partner in Thoothukudi. Quality products, professional installation.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contact Info</h3>
+                <ul>
+                    <li><i class="fas fa-phone"></i> +91 98765 43210</li>
+                    <li><i class="fab fa-whatsapp"></i> +91 98765 43210</li>
+                    <li><i class="fas fa-envelope"></i> info@kibharatenergies.com</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Thoothukudi, Tamil Nadu</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 KI Bharat Energies Solar Company. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div class="chatbot-container">
+        <div class="chatbot-toggle" onclick="toggleChatbot()">
+            <i class="fas fa-comment"></i>
+        </div>
+        <div class="chatbot-box" id="chatbotBox">
+            <div class="chatbot-header">
+                <h3><i class="fas fa-sun"></i> Solar Assistant</h3>
+                <button class="close-chat" onclick="toggleChatbot()"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <div class="message bot">
+                    <div class="message-content">
+                        👋 Hi! I'm your Solar Assistant. Ask me about products and recommendations!
+                    </div>
+                </div>
+            </div>
+            <div class="chat-input-area">
+                <input type="text" id="chatInput" placeholder="Ask about solar products...">
+                <button onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/chatbot.js"></script>
+</body>
+</html>

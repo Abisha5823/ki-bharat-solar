@@ -1,0 +1,82 @@
+{
+  "solar_systems": [
+    {
+      "bill_range": "₹0–₹2000",
+      "system_size": "1kW",
+      "cost_range": "₹70,000–₹90,000",
+      "panels": "3 panels",
+      "space_required": "80 sq.ft",
+      "suitable_for": "Small homes / Apartments"
+    },
+    {
+      "bill_range": "₹2000–₹5000",
+      "system_size": "2kW",
+      "cost_range": "₹1,30,000–₹1,60,000",
+      "panels": "6 panels",
+      "space_required": "160 sq.ft",
+      "suitable_for": "Medium homes"
+    },
+    {
+      "bill_range": "₹5000–₹10000",
+      "system_size": "3kW",
+      "cost_range": "₹1,90,000–₹2,40,000",
+      "panels": "9 panels",
+      "space_required": "240 sq.ft",
+      "suitable_for": "Large homes / Small offices"
+    },
+    {
+      "bill_range": "₹10000+",
+      "system_size": "5kW+",
+      "cost_range": "₹3,00,000+",
+      "panels": "15+ panels",
+      "space_required": "400+ sq.ft",
+      "suitable_for": "Villas / Commercial"
+    }
+  ],
+  "solar_pumps": [
+    {
+      "hp": "3HP",
+      "price": "₹1,50,000",
+      "panels": "6 panels",
+      "water_output": "1,00,000 L/day",
+      "suitable_land": "2-4 acres",
+      "depth": "Up to 200 feet"
+    },
+    {
+      "hp": "5HP",
+      "price": "₹2,20,000",
+      "panels": "10 panels",
+      "water_output": "1,80,000 L/day",
+      "suitable_land": "4-8 acres",
+      "depth": "Up to 300 feet"
+    },
+    {
+      "hp": "7.5HP",
+      "price": "₹3,50,000",
+      "panels": "15 panels",
+      "water_output": "2,50,000 L/day",
+      "suitable_land": "8-12 acres",
+      "depth": "Up to 400 feet"
+    }
+  ],
+  "inverters": [
+    {
+      "capacity": "1kW",
+      "price": "₹25,000",
+      "battery_support": "Yes",
+      "suitable_for": "Small homes"
+    },
+    {
+      "capacity": "3kW",
+      "price": "₹45,000",
+      "battery_support": "Yes",
+      "suitable_for": "Medium homes"
+    },
+    {
+      "capacity": "5kW",
+      "price": "₹75,000",
+      "battery_support": "Yes",
+      "suitable_for": "Large homes"
+    }
+  ]
+}

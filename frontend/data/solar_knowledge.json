@@ -1,0 +1,44 @@
+{
+  "products_knowledge": [
+    {
+      "topic": "Solar Panels",
+      "details": "We offer Mono PERC and Polycrystalline panels. Mono PERC gives 20% efficiency, Poly gives 17% efficiency. All panels have 25 years performance warranty."
+    },
+    {
+      "topic": "Solar Pumps",
+      "details": "Solar pumps are available from 3HP to 20HP. Surface pumps for open wells, submersible for borewells. Works on DC directly or AC with inverter."
+    },
+    {
+      "topic": "Inverters",
+      "details": "We have three types: On-grid (no battery), Off-grid (with battery), Hybrid (grid + battery + solar). Choose based on your needs."
+    }
+  ],
+  "technical_knowledge": [
+    {
+      "topic": "Borewell Depth",
+      "details": "For borewell depth up to 200ft: 3HP pump sufficient. 200-300ft: 5HP pump needed. 300-400ft: 7.5HP pump. Beyond 400ft: 10HP+ pump."
+    },
+    {
+      "topic": "Water Output",
+      "details": "3HP pump delivers 30,000-40,000 L/hr. 5HP delivers 50,000-60,000 L/hr. Actual depends on head and sunlight."
+    },
+    {
+      "topic": "Panel Requirement",
+      "details": "Each 1HP pump needs 1kW solar panels. So 3HP pump needs 3kW panels (approx 8 panels of 400W)."
+    }
+  ],
+  "process_knowledge": [
+    {
+      "topic": "Site Visit",
+      "details": "Our engineer visits your farm to check: borewell depth, water level, land location, sun exposure. Free site visit within 50km."
+    },
+    {
+      "topic": "Paperwork",
+      "details": "We handle all subsidy paperwork. Required documents: Aadhar card, land documents, bank passbook, recent photo."
+    },
+    {
+      "topic": "Installation Time",
+      "details": "After order confirmation, installation within 7-10 days. Foundation work takes 2 days, electrical work 2 days, commissioning 1 day."
+    }
+  ]
+}

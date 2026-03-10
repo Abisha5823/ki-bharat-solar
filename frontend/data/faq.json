@@ -1,0 +1,52 @@
+[
+  {
+    "question": "solar panel price",
+    "keywords": ["price", "cost", "panel rate", "solar panel cost"],
+    "answer": "Solar panel systems start from ₹70,000 for 1kW. Exact price depends on your requirement. Check our pricing page for details."
+  },
+  {
+    "question": "solar pump price",
+    "keywords": ["pump price", "solar pump cost", "agriculture pump"],
+    "answer": "Solar pump prices start from ₹1.5 Lakh for 3HP system. This includes panels, pump, controller and installation."
+  },
+  {
+    "question": "installation process",
+    "keywords": ["install", "fitting", "setup", "how to install"],
+    "answer": "Our installation process takes 2-3 days. We do site visit, design, installation, and testing. Free consultation available!"
+  },
+  {
+    "question": "government subsidy",
+    "keywords": ["subsidy", "government scheme", "solar subsidy"],
+    "answer": "Yes, government subsidy is available for solar pumps and rooftop systems. We help you with all paperwork."
+  },
+  {
+    "question": "warranty",
+    "keywords": ["warranty", "guarantee", "service"],
+    "answer": "Solar panels come with 25 years warranty. Inverters and pumps have 5 years warranty. Free service for 1 year."
+  },
+  {
+    "question": "payment terms",
+    "keywords": ["payment", "advance", "booking", "emi"],
+    "answer": "50% advance to book order, 40% on delivery, 10% after installation. EMI options available through partner banks."
+  },
+  {
+    "question": "maintenance",
+    "keywords": ["maintain", "cleaning", "service", "repair"],
+    "answer": "Solar panels need cleaning twice a year. We offer annual maintenance contracts starting from ₹2,000/year."
+  },
+  {
+    "question": "working during power cut",
+    "keywords": ["power cut", "load shedding", "backup", "night time"],
+    "answer": "Solar pumps work only during sunlight. For night backup, you need battery system or hybrid inverter."
+  },
+  {
+    "question": "land required",
+    "keywords": ["land", "space", "area", "acres"],
+    "answer": "For solar pump, you need 100-200 sq.ft for panels. For rooftop systems, 80-120 sq.ft per kW."
+  },
+  {
+    "question": "contact",
+    "keywords": ["phone", "mobile", "call", "whatsapp", "address"],
+    "answer": "Call us at +91 98765 43210 or WhatsApp same number. Visit our office in Thoothukudi."
+  }
+]

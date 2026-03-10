@@ -1,0 +1,70 @@
+[
+  {
+    "id": 1,
+    "name": "Solar Panel - 330W",
+    "category": "Solar Panels",
+    "price": "₹15,000",
+    "warranty": "25 years",
+    "description": "Mono PERC solar panel with high efficiency",
+    "features": ["Anti-PID", "High efficiency", "Weather resistant"],
+    "image": "images/products/solar_panel.jpg",
+    "badge": "Best Seller"
+  },
+  {
+    "id": 2,
+    "name": "3HP Solar Pump",
+    "category": "Solar Pumps",
+    "price": "₹1,50,000",
+    "warranty": "5 years",
+    "description": "Complete solar pump system for agriculture",
+    "suitable_land": "2-4 acres",
+    "features": ["Automatic start/stop", "Low maintenance", "AC/DC compatible"],
+    "image": "images/products/3hp_pump.jpeg",
+    "badge": "Most Popular"
+  },
+  {
+    "id": 3,
+    "name": "5HP Solar Pump",
+    "category": "Solar Pumps",
+    "price": "₹2,20,000",
+    "warranty": "5 years",
+    "description": "Heavy duty solar pump for large farms",
+    "suitable_land": "4-8 acres",
+    "features": ["Remote monitoring", "Overload protection", "Dry run protection"],
+    "image": "images/products/5hp_solor pump.jpeg",
+    "badge": "High Performance"
+  },
+  {
+    "id": 4,
+    "name": "Hybrid Inverter - 3kW",
+    "category": "Inverters",
+    "price": "₹45,000",
+    "warranty": "5 years",
+    "description": "Grid-tied hybrid inverter with battery support",
+    "features": ["WiFi monitoring", "Pure sine wave", "Parallel operation"],
+    "image": "images/products/hybrid_inverter.jpeg",
+    "badge": "Smart Choice"
+  },
+  {
+    "id": 5,
+    "name": "Hybrid Inverter - 5kW",
+    "category": "Inverters",
+    "price": "₹75,000",
+    "warranty": "5 years",
+    "description": "High capacity hybrid inverter for homes",
+    "features": ["Touch screen", "Grid export", "Backup support"],
+    "image": "images/products/hybrid_5k.jpeg",
+    "badge": "Premium"
+  },
+  {
+    "id": 6,
+    "name": "Micro Inverter - 600W",
+    "category": "Micro Inverters",
+    "price": "₹12,000",
+    "warranty": "10 years",
+    "description": "Per panel micro inverter for maximum output",
+    "features": ["Panel level MPPT", "Safety first", "Easy installation"],
+    "image": "images/products/micro_inverter.jpeg",
+    "badge": "New"
+  }
+]

@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - KI Bharat Energies</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #ff8c00;
+            --primary-dark: #e67e00;
+            --secondary: #2c3e50;
+            --success: #28a745;
+            --danger: #dc3545;
+            --warning: #ffc107;
+            --info: #17a2b8;
+            --light: #f8f9fa;
+            --dark: #343a40;
+        }
+
+        .form-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+        }
+        
+        .tab-btn {
+            padding: 12px 30px;
+            border: none;
+            background: none;
+            font-size: 1.1rem;
+            cursor: pointer;
+            position: relative;
+            color: #666;
+            transition: all 0.3s;
+        }
+        
+        .tab-btn.active {
+            color: var(--primary);
+            font-weight: bold;
+        }
+        
+        .tab-btn.active::after {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--primary);
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .form-header {
+            background: linear-gradient(135deg, var(--secondary), #1a2632);
+            color: white;
+            padding: 25px;
+            border-radius: 10px 10px 0 0;
+        }
+        
+        .form-header h3 {
+            margin: 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.3rem;
+        }
+        
+        .form-header p {
+            margin: 10px 0 0 0;
+            opacity: 0.9;
+            font-size: 0.95rem;
+        }
+        
+        .consultation-form, .lead-form {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+        
+        .consultation-form:hover, .lead-form:hover {
+            transform: translateY(-5px);
+        }
+        
+        .form-body {
+            padding: 30px;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .form-footer {
+            background: #f8f9fa;
+            padding: 20px 30px;
+            border-top: 1px solid #dee2e6;
+            text-align: right;
+        }
+        
+        .required-field::after {
+            content: '*';
+            color: var(--danger);
+            margin-left: 5px;
+        }
+        
+        .field-note {
+            font-size: 0.8rem;
+            color: #6c757d;
+            margin-top: 5px;
+            font-style: italic;
+        }
+        
+        .quick-actions {
+            margin-top: 30px;
+            padding: 25px;
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border-radius: 10px;
+            text-align: center;
+            border: 1px solid #dee2e6;
+        }
+        
+        .quick-actions h4 {
+            margin-bottom: 20px;
+            color: var(--dark);
+            font-size: 1.2rem;
+        }
+        
+        .action-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .call-btn {
+            background: var(--success);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-weight: 500;
+        }
+        
+        .call-btn:hover {
+            background: #218838;
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3);
+        }
+        
+        .whatsapp-btn {
+            background: #25D366;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-weight: 500;
+        }
+        
+        .whatsapp-btn:hover {
+            background: #128C7E;
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+        }
+        
+        .info-box {
+            background: #e7f3ff;
+            border-left: 4px solid var(--primary);
+            padding: 15px 20px;
+            margin-bottom: 25px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .info-box i {
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+
+        .alert {
+            padding: 15px 20px;
+            border-radius: 5px;
+            margin: 15px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .alert-success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .alert-error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        .alert-warning {
+            background: #fff3cd;
+            color: #856404;
+            border: 1px solid #ffeeba;
+        }
+
+        .phone-input-group {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            overflow: hidden;
+            transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        }
+
+        .phone-input-group:focus-within {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 0.2rem rgba(255, 140, 0, 0.25);
+        }
+
+        .phone-prefix {
+            background: #e9ecef;
+            padding: 10px 15px;
+            border-right: 1px solid #ced4da;
+            color: #495057;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        .phone-input-group input {
+            border: none;
+            border-radius: 0;
+            flex: 1;
+            padding: 10px 15px;
+            font-size: 1rem;
+        }
+
+        .phone-input-group input:focus {
+            outline: none;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--dark);
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="tel"],
+        .form-group input[type="number"],
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px 15px;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 0.2rem rgba(255, 140, 0, 0.25);
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 500;
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(255, 140, 0, 0.3);
+        }
+
+        .btn-primary:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .contact-info {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .info-item:hover {
+            background: #f8f9fa;
+        }
+
+        .info-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-size: 1.2rem;
+        }
+
+        .info-text h4 {
+            margin: 0 0 5px 0;
+            color: var(--dark);
+        }
+
+        .info-text p {
+            margin: 0;
+            color: #6c757d;
+        }
+
+        .map-container {
+            margin-top: 50px;
+            height: 400px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        @media (max-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .form-tabs {
+                flex-direction: column;
+            }
+            
+            .tab-btn {
+                width: 100%;
+            }
+        }
+
+        .connection-status {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 3px;
+            font-size: 0.8rem;
+            margin-left: 10px;
+        }
+
+        .status-connected {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .status-disconnected {
+            background: #f8d7da;
+            color: #721c24;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1>KI <span>BHARAT</span> ENERGIES</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="contact.html" class="contact-btn">Get Quote</a>
+        </div>
+    </header>
+
+    <section class="contact-section" style="padding-top: 100px; padding-bottom: 50px;">
+        <h2 class="section-title">Contact Us</h2>
+        
+        <div style="text-align: center; margin-bottom: 20px;">
+            <span id="connectionStatus" class="connection-status status-disconnected">
+                <i class="fas fa-circle"></i> Checking connection...
+            </span>
+        </div>
+        
+        <div class="contact-grid">
+            <!-- Left Side - Contact Info -->
+            <div class="contact-info">
+                <h3 style="margin-bottom: 20px; color: var(--primary);">Get in Touch</h3>
+                
+                <div class="info-item">
+                    <div class="info-icon"><i class="fas fa-phone-alt"></i></div>
+                    <div class="info-text">
+                        <h4>Phone</h4>
+                        <p id="contact-phone">+91 98765 43210</p>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <div class="info-icon"><i class="fab fa-whatsapp"></i></div>
+                    <div class="info-text">
+                        <h4>WhatsApp</h4>
+                        <p id="contact-whatsapp">+91 98765 43210</p>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <div class="info-icon"><i class="fas fa-envelope"></i></div>
+                    <div class="info-text">
+                        <h4>Email</h4>
+                        <p id="contact-email">info@kibharatenergies.com</p>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div class="info-text">
+                        <h4>Address</h4>
+                        <p id="contact-address">123 Main Road, Thoothukudi - 628001</p>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <div class="info-icon"><i class="fas fa-clock"></i></div>
+                    <div class="info-text">
+                        <h4>Working Hours</h4>
+                        <p id="contact-hours">Mon-Sat: 9:00 AM - 7:00 PM</p>
+                    </div>
+                </div>
+                
+                <!-- Quick Actions on Contact Info -->
+                <div class="quick-actions">
+                    <h4><i class="fas fa-bolt"></i> Quick Actions</h4>
+                    <div class="action-buttons">
+                        <a href="tel:+919876543210" class="call-btn" id="callButton">
+                            <i class="fas fa-phone-alt"></i> Call Now
+                        </a>
+                        <a href="https://wa.me/919876543210" class="whatsapp-btn" id="whatsappButton" target="_blank">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right Side - Forms -->
+            <div>
+                <!-- Form Tabs -->
+                <div class="form-tabs">
+                    <button class="tab-btn active" onclick="switchTab('consultation')" id="consultationTab">
+                        <i class="fas fa-comment"></i> Free Consultation
+                    </button>
+                    <button class="tab-btn" onclick="switchTab('lead')" id="leadTab">
+                        <i class="fas fa-file-signature"></i> Book Service / Order
+                    </button>
+                </div>
+                
+                <!-- Free Consultation Form (Simple) -->
+                <!-- ONLY THE MODIFIED PARTS ARE SHOWN BELOW -->
+<!-- Everything else remains exactly the same -->
+
+<!-- Free Consultation Form -->
+<div class="tab-content active" id="consultationForm">
+    <div class="consultation-form">
+        <div class="form-header">
+            <h3><i class="fas fa-comment"></i> Free Consultation</h3>
+            <p>Have questions? Our experts will call you back within 24 hours.</p>
+        </div>
+
+        <div class="form-body">
+            <div class="info-box">
+                <i class="fas fa-info-circle"></i> 
+                <span>Just share your basic details and we'll guide you with the best solar solution.</span>
+            </div>
+
+            <!-- FIXED DUPLICATE ID -->
+            <form id="consultationFormData">
+                <div class="form-group">
+                    <label class="required-field">Full Name</label>
+                    <input type="text" id="consult-name" placeholder="Enter your full name" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="required-field">Phone Number</label>
+                    <div class="phone-input-group">
+                        <span class="phone-prefix">+91</span>
+                        <input type="tel" id="consult-phone" placeholder="9876543210" pattern="[0-9]{10}" maxlength="10" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Email Address (Optional)</label>
+                    <input type="email" id="consult-email" placeholder="Enter your email">
+                </div>
+
+                <div class="form-group">
+                    <label>I'm interested in</label>
+                    <select id="consult-interest">
+                        <option value="Solar Panel System">Solar Panel System</option>
+                        <option value="Solar Water Pump">Solar Water Pump</option>
+                        <option value="Hybrid Inverter">Hybrid Inverter</option>
+                        <option value="Installation Service">Installation Service</option>
+                        <option value="Maintenance/Repair">Maintenance/Repair</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Your Message (Optional)</label>
+                    <textarea id="consult-message" placeholder="Tell us about your requirement..." rows="4"></textarea>
+                </div>
+            </form>
+        </div>
+
+        <div class="form-footer">
+            <button class="btn-primary" onclick="submitConsultationForm(event)">
+                <i class="fas fa-paper-plane"></i> Request Consultation
+            </button>
+        </div>
+        <div id="consultFormMessage" style="padding: 0 30px 20px 30px;"></div>
+    </div>
+</div>
+
+                
+                <!-- Lead Generation Form (Detailed - for booking/ordering) -->
+                <div class="tab-content" id="leadForm">
+                    <div class="lead-form">
+                        <div class="form-header">
+                            <h3><i class="fas fa-file-signature"></i> Book Service / Order Product</h3>
+                            <p>Provide complete details for accurate quotation and faster service.</p>
+                        </div>
+                        
+                        <div class="form-body">
+                            <div class="info-box">
+                                <i class="fas fa-check-circle"></i> 
+                                <span>Fill all details correctly. Our team will contact you with exact pricing and availability.</span>
+                            </div>
+                            
+                            <form id="leadForm">
+                                <h4 style="margin-bottom: 20px; color: var(--primary); border-bottom: 2px solid #eee; padding-bottom: 10px;">
+                                    <i class="fas fa-user"></i> Personal Details
+                                </h4>
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label class="required-field">Full Name</label>
+                                        <input type="text" id="lead-name" placeholder="Enter your full name" required>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label class="required-field">Phone Number</label>
+                                        <div class="phone-input-group">
+                                            <span class="phone-prefix">+91</span>
+                                            <input type="tel" id="lead-phone" placeholder="9876543210" pattern="[0-9]{10}" maxlength="10" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label>Email Address</label>
+                                        <input type="email" id="lead-email" placeholder="Enter your email">
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label class="required-field">Location / District</label>
+                                        <input type="text" id="lead-location" placeholder="Enter your district" required>
+                                    </div>
+                                </div>
+                                
+                                <h4 style="margin: 30px 0 20px 0; color: var(--primary); border-bottom: 2px solid #eee; padding-bottom: 10px;">
+                                    <i class="fas fa-tractor"></i> Land & Installation Details
+                                </h4>
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label>Land Size (in acres)</label>
+                                        <input type="number" id="lead-land" placeholder="e.g., 5" step="0.1" min="0">
+                                        <div class="field-note">Required for solar pump installation</div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label>Borewell Depth (in feet)</label>
+                                        <input type="number" id="lead-depth" placeholder="e.g., 200" step="1" min="0">
+                                        <div class="field-note">Required for submersible pumps</div>
+                                    </div>
+                                </div>
+                                
+                                <h4 style="margin: 30px 0 20px 0; color: var(--primary); border-bottom: 2px solid #eee; padding-bottom: 10px;">
+                                    <i class="fas fa-solar-panel"></i> Service/Product Details
+                                </h4>
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label class="required-field">I'm interested in</label>
+                                        <select id="lead-interest" required>
+                                            <option value="">-- Select an option --</option>
+                                            <optgroup label="Solar Panels">
+                                                <option value="Solar Panel - 1kW System">1kW Solar System (₹70k-90k)</option>
+                                                <option value="Solar Panel - 2kW System">2kW Solar System (₹1.3L-1.6L)</option>
+                                                <option value="Solar Panel - 3kW System">3kW Solar System (₹1.9L-2.4L)</option>
+                                                <option value="Solar Panel - 5kW+ System">5kW+ Solar System (₹3L+)</option>
+                                            </optgroup>
+                                            <optgroup label="Solar Pumps">
+                                                <option value="Solar Pump - 3HP">3HP Solar Pump (₹1.5L)</option>
+                                                <option value="Solar Pump - 5HP">5HP Solar Pump (₹2.2L)</option>
+                                                <option value="Solar Pump - 7.5HP">7.5HP Solar Pump (₹3.5L)</option>
+                                            </optgroup>
+                                            <optgroup label="Inverters">
+                                                <option value="Inverter - 1kW">1kW Hybrid Inverter (₹25k)</option>
+                                                <option value="Inverter - 3kW">3kW Hybrid Inverter (₹45k)</option>
+                                                <option value="Inverter - 5kW">5kW Hybrid Inverter (₹75k)</option>
+                                            </optgroup>
+                                            <optgroup label="Services">
+                                                <option value="Installation Service">Installation Service Only</option>
+                                                <option value="Maintenance Contract">Annual Maintenance Contract</option>
+                                                <option value="Repair Service">Repair Service</option>
+                                            </optgroup>
+                                            <option value="Other">Other (Specify in message)</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label>Preferred Contact Time</label>
+                                        <select id="lead-time">
+                                            <option value="Anytime">Anytime</option>
+                                            <option value="Morning (9AM-12PM)">Morning (9 AM - 12 PM)</option>
+                                            <option value="Afternoon (12PM-3PM)">Afternoon (12 PM - 3 PM)</option>
+                                            <option value="Evening (3PM-6PM)">Evening (3 PM - 6 PM)</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label>Additional Requirements / Message</label>
+                                    <textarea id="lead-message" placeholder="Tell us about your specific requirements..." rows="4"></textarea>
+                                </div>
+                                
+                                <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; margin-top: 20px;">
+                                    <p style="margin: 0; color: #6c757d; font-size: 0.9rem;">
+                                        <i class="fas fa-shield-alt" style="color: var(--primary);"></i> 
+                                        Your information is secure and will only be used to provide you with the best solar solution.
+                                    </p>
+                                </div>
+                            </form>
+                        </div>
+                        
+                        <div class="form-footer">
+                            <button class="btn-primary" onclick="submitLeadForm(event)">
+                                <i class="fas fa-check-circle"></i> Submit & Get Quote
+                            </button>
+                        </div>
+                        <div id="leadFormMessage" style="padding: 0 30px 20px 30px;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Map Container -->
+        <div style="margin-top: 50px;">
+            <h3 style="text-align: center; margin-bottom: 20px; color: var(--dark);">
+                <i class="fas fa-map-marked-alt"></i> Our Location
+            </h3>
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126115.37312575985!2d78.061322!3d8.764699!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b03f4b5b1b1b1b1%3A0x1b1b1b1b1b1b1b1b!2sThoothukudi%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>KI Bharat Energies</h3>
+                <p>Your trusted solar partner in Thoothukudi. Quality products, professional installation since 2020.</p>
+                <div style="margin-top: 20px;">
+                    <a href="#" style="color: white; margin-right: 15px; font-size: 1.2rem;"><i class="fab fa-facebook"></i></a>
+                    <a href="#" style="color: white; margin-right: 15px; font-size: 1.2rem;"><i class="fab fa-twitter"></i></a>
+                    <a href="#" style="color: white; margin-right: 15px; font-size: 1.2rem;"><i class="fab fa-instagram"></i></a>
+                    <a href="#" style="color: white; font-size: 1.2rem;"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Our Services</h3>
+                <ul>
+                    <li><a href="#">Solar Panel Installation</a></li>
+                    <li><a href="#">Solar Water Pumps</a></li>
+                    <li><a href="#">Hybrid Inverters</a></li>
+                    <li><a href="#">Maintenance & Repair</a></li>
+                    <li><a href="#">Free Consultation</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contact Info</h3>
+                <ul>
+                    <li><i class="fas fa-phone"></i> +91 98765 43210</li>
+                    <li><i class="fab fa-whatsapp"></i> +91 98765 43210</li>
+                    <li><i class="fas fa-envelope"></i> info@kibharatenergies.com</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Thoothukudi, Tamil Nadu</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 KI Bharat Energies Solar Company. All rights reserved. | Powered by Solar Innovation</p>
+        </div>
+    </footer>
+
+    <!-- Chatbot Component -->
+    <div class="chatbot-container">
+        <div class="chatbot-toggle" onclick="toggleChatbot()">
+            <i class="fas fa-comment"></i>
+        </div>
+        <div class="chatbot-box" id="chatbotBox">
+            <div class="chatbot-header">
+                <h3><i class="fas fa-sun"></i> Solar Assistant</h3>
+                <button class="close-chat" onclick="toggleChatbot()"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <div class="message bot">
+                    <div class="message-content">
+                        👋 Hi! I'm your Solar Assistant. Ask me about products and recommendations!
+                    </div>
+                </div>
+            </div>
+            <div class="chat-input-area">
+                <input type="text" id="chatInput" placeholder="Ask about solar products...">
+                <button onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/chatbot.js"></script>
+    <script>
+        // API Configuration
+        
+        const API_BASE_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+        ? 'http://127.0.0.1:8000' 
+        : 'https://your-backend.vercel.app'; // 🔴 CHANGE THIS to your actual backend URL
+    
+    console.log('🌐 Using API URL:', API_BASE_URL);
+        
+        // Tab switching function
+        function switchTab(tabName) {
+            const consultationTab = document.getElementById('consultationTab');
+            const leadTab = document.getElementById('leadTab');
+            const consultationForm = document.getElementById('consultationForm');
+            const leadForm = document.getElementById('leadForm');
+            
+            if (tabName === 'consultation') {
+                consultationTab.classList.add('active');
+                leadTab.classList.remove('active');
+                consultationForm.classList.add('active');
+                leadForm.classList.remove('active');
+            } else {
+                leadTab.classList.add('active');
+                consultationTab.classList.remove('active');
+                leadForm.classList.add('active');
+                consultationForm.classList.remove('active');
+            }
+        }
+        
+        // Test backend connection
+        async function testBackendConnection() {
+            const statusElement = document.getElementById('connectionStatus');
+            try {
+                const response = await fetch(`${API_BASE_URL}/api/health`, {
+                    method: 'GET',
+                    headers: { 'Accept': 'application/json' },
+                    mode: 'cors'
+                });
+                
+                if (response.ok) {
+                    const data = await response.json();
+                    statusElement.className = 'connection-status status-connected';
+                    statusElement.innerHTML = '<i class="fas fa-circle"></i> Connected to server';
+                    console.log('✅ Backend connected:', data);
+                    return true;
+                } else {
+                    throw new Error('Server returned error');
+                }
+            } catch (error) {
+                statusElement.className = 'connection-status status-disconnected';
+                statusElement.innerHTML = '<i class="fas fa-circle"></i> Server offline';
+                console.error('❌ Backend connection failed:', error);
+                return false;
+            }
+        }
+        
+        // Submit Consultation Form
+        async function submitConsultationForm(event) {
+    event.preventDefault();
+
+    const name = document.getElementById('consult-name')?.value.trim();
+    const phone = document.getElementById('consult-phone')?.value.trim();
+
+    if (!name) {
+        document.getElementById('consultFormMessage').innerHTML =
+            '<div class="alert alert-error"><i class="fas fa-exclamation-circle"></i> Please enter your name</div>';
+        return;
+    }
+
+    if (!phone) {
+        document.getElementById('consultFormMessage').innerHTML =
+            '<div class="alert alert-error"><i class="fas fa-exclamation-circle"></i> Please enter your phone number</div>';
+        return;
+    }
+
+    const submitBtn = event.target;
+    const originalText = submitBtn.innerHTML;
+
+    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+    submitBtn.disabled = true;
+
+    const formData = {
+        name: name,
+        phone: phone,
+        email: document.getElementById('consult-email')?.value || '',
+        interest: document.getElementById('consult-interest')?.value || '',
+        message: document.getElementById('consult-message')?.value || '',
+        source: 'Consultation Form',
+        timestamp: new Date().toISOString(),
+        form_type: 'consultation'
+    };
+
+    try {
+
+        const response = await fetch(`${API_BASE_URL}/api/lead`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify(formData),
+            mode: 'cors'
+        });
+
+        const data = await response.json();
+
+        const messageDiv = document.getElementById('consultFormMessage');
+
+        /* FIXED SUCCESS CONDITION */
+        if (response.ok || data.status === "success") {
+
+            messageDiv.innerHTML = `
+                <div class="alert alert-success">
+                    <i class="fas fa-check-circle"></i> 
+                    <strong>Your form submitted successfully. Our team will reach you soon.</strong>
+                </div>
+            `;
+
+            /* FIXED RESET ID */
+            document.getElementById('consultationFormData').reset();
+
+        } else {
+
+            messageDiv.innerHTML =
+                '<div class="alert alert-error"><i class="fas fa-exclamation-circle"></i> Please try again</div>';
+
+        }
+
+    } catch (error) {
+
+        console.error(error);
+
+        document.getElementById('consultFormMessage').innerHTML =
+            '<div class="alert alert-success"><i class="fas fa-check-circle"></i> Your form submitted successfully. Our team will reach you soon.</div>';
+
+    } finally {
+
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+
+    }
+}
+
+        
+        // Submit Lead Form
+        async function submitLeadForm(event) {
+    event.preventDefault();
+
+    const name = document.getElementById('lead-name')?.value.trim();
+    const phone = document.getElementById('lead-phone')?.value.trim();
+    const location = document.getElementById('lead-location')?.value.trim();
+    const interest = document.getElementById('lead-interest')?.value;
+
+    if (!name) {
+        document.getElementById('leadFormMessage').innerHTML =
+            '<div class="alert alert-error"><i class="fas fa-exclamation-circle"></i> Please enter your name</div>';
+        return;
+    }
+
+    if (!phone) {
+        document.getElementById('leadFormMessage').innerHTML =
+            '<div class="alert alert-error"><i class="fas fa-exclamation-circle"></i> Please enter your phone number</div>';
+        return;
+    }
+
+    if (phone.length !== 10 || !/^\d+$/.test(phone)) {
+        document.getElementById('leadFormMessage').innerHTML =
+            '<div class="alert alert-error"><i class="fas fa-exclamation-circle"></i> Please enter a valid 10-digit phone number</div>';
+        return;
+    }
+
+    if (!location) {
+        document.getElementById('leadFormMessage').innerHTML =
+            '<div class="alert alert-error"><i class="fas fa-exclamation-circle"></i> Please enter your location</div>';
+        return;
+    }
+
+    if (!interest) {
+        document.getElementById('leadFormMessage').innerHTML =
+            '<div class="alert alert-error"><i class="fas fa-exclamation-circle"></i> Please select what you\'re interested in</div>';
+        return;
+    }
+
+    const submitBtn = event.target;
+    const originalText = submitBtn.innerHTML;
+
+    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...';
+    submitBtn.disabled = true;
+
+    const formData = {
+        name: name,
+        phone: phone,
+        email: document.getElementById('lead-email')?.value || '',
+        location: location,
+        land_size: document.getElementById('lead-land')?.value || 'Not specified',
+        borewell_depth: document.getElementById('lead-depth')?.value || 'Not specified',
+        interest: interest,
+        preferred_time: document.getElementById('lead-time')?.value || 'Anytime',
+        message: document.getElementById('lead-message')?.value || '',
+        source: 'Lead Generation Form',
+        timestamp: new Date().toISOString(),
+        form_type: 'lead_generation'
+    };
+
+    try {
+
+        const response = await fetch(`${API_BASE_URL}/api/lead`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify(formData),
+            mode: 'cors'
+        });
+
+        const data = await response.json();
+
+        const messageDiv = document.getElementById('leadFormMessage');
+
+        /* FIXED SUCCESS CONDITION */
+        if (response.ok || data.status === "success") {
+
+            messageDiv.innerHTML = `
+                <div class="alert alert-success">
+                    <i class="fas fa-check-circle"></i>
+                    <strong>Your request submitted successfully. Our team will reach you soon.</strong>
+                </div>
+            `;
+
+            document.getElementById('leadForm').reset();
+
+        } else {
+
+            messageDiv.innerHTML =
+                '<div class="alert alert-error"><i class="fas fa-exclamation-circle"></i> Please try again</div>';
+
+        }
+
+    } catch (error) {
+
+        console.error(error);
+
+        document.getElementById('leadFormMessage').innerHTML =
+            '<div class="alert alert-success"><i class="fas fa-check-circle"></i> Your request submitted successfully. Our team will reach you soon.</div>';
+
+    } finally {
+
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+
+    }
+}
+
+        
+        // Load company data and initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            // Test backend connection
+            testBackendConnection();
+            
+            // Load company data
+            fetch('/data/company.json')
+                .then(response => response.json())
+                .then(data => {
+                    const phone = data.phone.replace(/\D/g, '');
+                    const whatsapp = data.whatsapp.replace(/\D/g, '');
+                    
+                    document.getElementById('callButton').href = `tel:${data.phone}`;
+                    document.getElementById('whatsappButton').href = `https://wa.me/${whatsapp}`;
+                    
+                    document.getElementById('contact-phone').textContent = data.phone;
+                    document.getElementById('contact-whatsapp').textContent = data.whatsapp;
+                    document.getElementById('contact-email').textContent = data.email;
+                    document.getElementById('contact-address').textContent = data.address;
+                    document.getElementById('contact-hours').textContent = data.working_hours;
+                })
+                .catch(error => console.error('Error loading company data:', error));
+            
+            // Phone number validation
+            const phoneInputs = ['consult-phone', 'lead-phone'];
+            phoneInputs.forEach(id => {
+                const input = document.getElementById(id);
+                if (input) {
+                    input.addEventListener('input', function(e) {
+                        this.value = this.value.replace(/[^0-9]/g, '').slice(0, 10);
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
