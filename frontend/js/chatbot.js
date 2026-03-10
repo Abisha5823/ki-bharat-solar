@@ -2,7 +2,7 @@
 // API Configuration - Auto-detects environment
 const API_BASE_URL = window.location.hostname === 'localhost' 
     ? 'http://127.0.0.1:8000' 
-    : 'https://your-backend.vercel.app'; // Replace with your actual backend URL
+    : ''; // Replace with your actual backend URL
 
 console.log('🌐 Using API URL:', API_BASE_URL);
 class SolarChatbot {

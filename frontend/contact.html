@@ -805,10 +805,13 @@
         // API Configuration
         
         const API_BASE_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
-        ? 'http://127.0.0.1:8000' 
-        : 'https://your-backend.vercel.app'; // 🔴 CHANGE THIS to your actual backend URL
+        ? 'http://127.0.0.1:8000'
+        : ''; // 🔴 CHANGE THIS to your actual backend URL
     
-    console.log('🌐 Using API URL:', API_BASE_URL);
+    console.log('🌐 Using API URL:', API_BASE_URL); // 🔴 CHANGE THIS to your actual backend URL
+        
+    
+    
         
         // Tab switching function
         function switchTab(tabName) {
@@ -1092,4 +1095,4 @@
         });
     </script>
 </body>
-</html>
+</html> 
