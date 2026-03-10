@@ -1,9 +1,7 @@
 // Main JavaScript for Solar Company Website
 
 // API URL
-const MAIN_API_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
-    ? 'http://127.0.0.1:8000' 
-    : 'ki-bharat-solar-gqxb.vercel.app'; // 🔴 CHANGE THIS to your actual backend URL
+const MAIN_API_URL ='ki-bharat-solar-gqxb.vercel.app';// 🔴 CHANGE THIS to your actual backend URL
 
 console.log('🌐 Main using API URL:', MAIN_API_URL);
 
